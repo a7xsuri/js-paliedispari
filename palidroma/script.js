@@ -1,12 +1,23 @@
-// const UtentInputWord = document.getElementById('word');
-let giraparola ="";
-let parola ='ciao';
-let verifica = document.getElementById("verifica").addEventListener('click',WordPalindormaVerification);
+let parola =prompt("inserisci parola");
+
 function WordPalindormaVerification(parola){
 let letters = parola.split("");
- for(let i = letters.length - 1; i>0 ;i--) {
+let giraparola="";
+let parolagira="";
+
+for(let i = letters.length - 1; i>=0 ;i--) {
      giraparola+=letters[i];
  }
- return giraparola;
+
+for(let i = 0 ; i <=letters.length - 1 ;i++) {
+     parolagira+=letters[i];
+ }
+
+ if (parolagira==giraparola){
+    document.write('la parola inserita è palindroma')
+}else{
+    document.write('la parola inserita non è palindroma')
 }
-console.log(giraparola)
+
+ return parolagira, giraparola;
+}
