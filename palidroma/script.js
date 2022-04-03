@@ -1,5 +1,5 @@
 let parola =prompt("inserisci parola");
-
+let Computermex = document.getElementById('titolo').innerHTML
 function WordPalindormaVerification(parola){
 let letters = parola.split("");
 let giraparola="";
@@ -21,3 +21,5 @@ for(let i = 0 ; i <=letters.length - 1 ;i++) {
 
  return parolagira, giraparola;
 }
+
+WordPalindormaVerification(parola)
